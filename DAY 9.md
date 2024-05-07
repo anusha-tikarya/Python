@@ -1,3 +1,71 @@
+## Unpacking /Destructing
+Unpacking, also known as destructuring, is a feature in Python that allows you to assign the elements of a tuple or list to individual variables. It's particularly useful when you want to extract values from iterables like tuples or lists quickly.
+
+### Unpacking in Tuples:
+
+```python
+# Tuple
+person = ("Alice", 30, "New York")
+
+# Unpacking tuple into variables
+name, age, city = person
+
+print(name)  # Output: Alice
+print(age)   # Output: 30
+print(city)  # Output: New York
+```
+
+In the above example, `name`, `age`, and `city` are individual variables that receive values from the `person` tuple through unpacking.
+
+### Use of Underscore (_) in Unpacking:
+
+```python
+# Tuple with unused values
+person = ("Alice", 30, "New York", "555-1234")
+
+# Unpacking tuple into variables, ignoring phone number
+name, age, city, _ = person
+
+print(name)  # Output: Alice
+print(age)   # Output: 30
+print(city)  # Output: New York
+```
+
+Here, the underscore `_` is used as a placeholder for the value we don't want to use or care about during unpacking.
+
+### Unpacking in Lists:
+
+```python
+# List
+numbers = [1, 2, 3]
+
+# Unpacking list into variables
+first, second, third = numbers
+
+print(first)   # Output: 1
+print(second)  # Output: 2
+print(third)   # Output: 3
+```
+
+### Use of Star (*) in Unpacking:
+
+```python
+# List with multiple values
+numbers = [1, 2, 3, 4, 5]
+
+# Unpacking list into variables, with * to capture remaining values
+first, *rest = numbers
+
+print(first)  # Output: 1
+print(rest)   # Output: [2, 3, 4, 5]
+```
+
+In this example, `*rest` collects all remaining values from the list after assigning the first value to `first`.
+
+Unpacking is a convenient way to work with collections of data, allowing you to access individual elements quickly and easily
+
+## ------------------------------------------------------------
+
 ![image](https://github.com/anusha-tikarya/Python.md/assets/84814767/01618c32-90cd-483a-9da2-1a4f2178f2f9)
 
 ![image](https://github.com/anusha-tikarya/Python.md/assets/84814767/fcc09729-03b2-4a77-b7a4-ec49b2a23d01)
@@ -6,6 +74,7 @@
 ![image](https://github.com/anusha-tikarya/Python.md/assets/84814767/9c2f779a-9ed7-4bdd-8ca2-b23be33e352b)
 ![image](https://github.com/anusha-tikarya/Python.md/assets/84814767/db4b5d09-cfb5-432c-bb6b-358bea094339)
 ![image](https://github.com/anusha-tikarya/Python.md/assets/84814767/de19b352-e14f-4307-b888-f4faf1831ece)
+![image](https://github.com/anusha-tikarya/Python.md/assets/84814767/2aca959a-f31c-447f-8d46-4bd3d03b1562)
 
 # Unpacking -> ** Dict
 movie = {"name": "John wick", "year": 2014}
@@ -75,3 +144,96 @@ for i in employees:
         i["status"] = "junior"
 print(employees)
 ```
+## Function
+![image](https://github.com/anusha-tikarya/Python.md/assets/84814767/966d4652-f95f-489f-b8e7-e478103c8e36)
+![image](https://github.com/anusha-tikarya/Python.md/assets/84814767/6fd68cf0-6c25-45d4-a7b6-bc7937fcaecc)
+
+Functions in Python allow you to encapsulate a block of code that can be reused throughout your program. They help in organizing your code, making it more readable, maintainable, and modular. Here's a simple example:
+
+```python
+# Define a function to greet a user
+def greet_user(name):
+    """Function to greet a user by name."""
+    print("Hello, " + name + "!")
+
+# Call the function
+greet_user("Alice")
+greet_user("Bob")
+```
+
+In this example:
+
+- We define a function called `greet_user` that takes one parameter `name`.
+- Inside the function, it prints a greeting message using the provided name.
+- We call the `greet_user` function twice with different names ("Alice" and "Bob").
+
+Functions can take multiple parameters, perform calculations, manipulate data, and return results as needed. They are fundamental building blocks in Python programming and are used extensively in all sorts of applications.
+
+## PARAMETER AND ARGUMENT
+```python
+#Parameter: name
+def greet_user(name):
+    print("Hello, " + name + "!")
+
+#Argument: "Alice"
+greet_user("Alice")
+```
+
+![image](https://github.com/anusha-tikarya/Python.md/assets/84814767/d6ca3aeb-05d9-400e-8707-033e7da23c9a)
+here parameter are a & b and values we will provide in the place of a , b are arguments like 8 ,10
+and every time we call function (add (_ ,_) ) is function calling .
+
+## DEFAULT VALUE IN FUNCTION
+Default parameter values in Python allow you to define a default value for a parameter in a function. If the function is called without providing a value for that parameter, it will use the default value instead. Here's an example with a driving test scenario:
+
+```python
+def take_driving_test(name, age, car='sedan'):
+    """Function to simulate taking a driving test."""
+    print(f"{name}, aged {age}, is taking the driving test with a {car}.")
+
+# Calling the function without specifying the car
+take_driving_test("Alice", 20)
+
+# Calling the function with a specified car
+take_driving_test("Bob", 22, "SUV")
+```
+
+In this example:
+
+- The function `take_driving_test` has three parameters: `name`, `age`, and `car` (with a default value of `'sedan'`).
+- When the function is called without providing a value for `car`, it uses the default value.
+- The first call to `take_driving_test` only provides values for `name` and `age`, so `car` defaults to `'sedan'`.
+- The second call to `take_driving_test` provides values for all three parameters, so the default value for `car` is overridden.
+
+The main difference is that default parameter values allow you to specify a default value for a parameter, which is used when the function is called without providing a value for that parameter. This provides flexibility and convenience when calling the function, as you can choose to override the default value if needed.
+
+## Types Of Argument:
+
+In Python, there are two types of arguments that can be passed to a function: positional arguments and keyword arguments.
+
+1. **Positional Arguments**:
+   - Positional arguments are passed to a function based on their position or order in the function call.
+   - They are defined in the function signature in the order they are expected to be received.
+   - When calling the function, you must provide values for these arguments in the same order.
+
+Example:
+```python
+def greet(name, age):
+    print(f"Hello, {name}! You are {age} years old.")
+
+# Positional arguments: "Alice" and 25
+greet("Alice", 25)
+```
+
+2. **Keyword Arguments**:
+   - Keyword arguments are passed with a keyword and a corresponding value.
+   - They are not dependent on the order in which they are passed, as long as their keyword matches the parameter name in the function signature.
+   - Keyword arguments are useful when you want to specify only certain arguments and leave the others with their default values, or when the order of the arguments is not obvious.
+
+Example:
+```python
+# Keyword arguments: age=30 and name="Bob"
+greet(age=30, name="Bob")
+```
+
+In summary, positional arguments are passed based on their position in the function call, while keyword arguments are passed with explicit keyword-value pairs, allowing flexibility and clarity, especially when dealing with functions with many parameters.
