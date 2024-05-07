@@ -211,7 +211,7 @@ The main difference is that default parameter values allow you to specify a defa
 
 In Python, there are two types of arguments that can be passed to a function: positional arguments and keyword arguments.
 
-1. **Positional Arguments**:
+1. **Positional Arguments**:(FIRST)
    - Positional arguments are passed to a function based on their position or order in the function call.
    - They are defined in the function signature in the order they are expected to be received.
    - When calling the function, you must provide values for these arguments in the same order.
@@ -225,7 +225,7 @@ def greet(name, age):
 greet("Alice", 25)
 ```
 
-2. **Keyword Arguments**:
+2. **Keyword Arguments**:(LAST)
    - Keyword arguments are passed with a keyword and a corresponding value.
    - They are not dependent on the order in which they are passed, as long as their keyword matches the parameter name in the function signature.
    - Keyword arguments are useful when you want to specify only certain arguments and leave the others with their default values, or when the order of the arguments is not obvious.
@@ -237,3 +237,96 @@ greet(age=30, name="Bob")
 ```
 
 In summary, positional arguments are passed based on their position in the function call, while keyword arguments are passed with explicit keyword-value pairs, allowing flexibility and clarity, especially when dealing with functions with many parameters.
+
+
+# Task 1
+
+**Add Book Function: Write a function add_book(library, new_book)**
+
+![image](https://github.com/anusha-tikarya/Python.md/assets/84814767/0b285ed3-9a29-4c88-82ce-df074395c1ac)
+
+TASK-1
+```python
+def add_book(library_list,book):
+    library_list.append(book)
+    return library_list
+print(add_book(library_list,book))
+```
+
+# Task 2
+
+ **Search Books by Author Function: Write a function search_by_author(library, author_name)**
+ 
+![image](https://github.com/anusha-tikarya/Python.md/assets/84814767/95199aa8-2e89-44a4-95ad-23309729b529)
+
+TASK-2
+```python
+def search_book(library_list,author_name):
+    for book in library_list:
+        if(book["author"]==author_name):
+            print(book)
+print(search_book(library_list,"Mark Lutz"))
+```
+
+# Task 3
+ **Check Out Book Function: Write a function check_out_book(library, title) that marks a book as not available if it exists and is available in the library.**
+**1. Book available**
+**2. Book unavailable**
+ **3. Book doesn't exists**
+ ![image](https://github.com/anusha-tikarya/Python.md/assets/84814767/2541d858-e950-4a9f-b0e1-c74714671c7a)
+
+
+## ways to end a function:
+In Python, there are two common ways to end a function:
+
+1. **Using the `return` statement**:
+   - The `return` statement is used to exit a function and return a value (if any) back to the caller.
+   - It can be used anywhere within the function to exit prematurely.
+   - If a `return` statement is not explicitly included in a function, the function will implicitly return `None` when it reaches the end.
+
+Example:
+```python
+def add(a, b):
+    return a + b
+```
+
+2. **Reaching the end of the function block**:
+   - If no `return` statement is encountered during the execution of a function, or if the function block ends without encountering a `return` statement, the function will implicitly return `None`.
+   - This happens when the function block executes all its statements without encountering a `return` statement.
+
+Example:
+```python
+def greet(name):
+    print("Hello, " + name + "!")
+    # No return statement
+```
+
+Both ways are valid and can be used based on the requirements of the function. The choice depends on whether the function needs to return a value or not.
+## =======================================================
+def own_max(*nums):
+    print(nums, type(nums))
+ 
+ 
+own_max(5, 6, 10)
+own_max(5, 6, 10, 7, 80, 60)
+
+ 
+def own_max(*nums):
+    # Implement max logic
+    print(nums, type(nums))
+ 
+ 
+own_max(5, 6, 10)
+own_max(5, 6, 10, 7, 80, 60)
+
+
+ ```python
+def own_max(*nums):
+     max = nums[0]
+     for num in nums:
+          if num > max:
+               max = num
+     return max
+```
+![image](https://github.com/anusha-tikarya/Python.md/assets/84814767/2ac3f9a9-e297-45ba-8f91-4c00435b80c5)
+
