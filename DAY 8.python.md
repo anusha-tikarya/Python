@@ -380,8 +380,25 @@ Dictionaries in Python are a powerful data structure used to store collections o
    ```python
    if "name" in my_dict:
        print("Name exists in the dictionary.")
+   
    ```
+8. **get**
+```python
+# Define a dictionary
+person = {"name": "Alice", "age": 30, "city": "New York"}
 
+# Accessing values using keys
+name = person["name"]
+age = person.get("age")
+
+print("Name:", name)  # Output: Alice
+print("Age:", age)    # Output: 30
+```
+
+In this example:
+- We have a dictionary `person` with keys `"name"`, `"age"`, and `"city"`.
+- We access the values associated with keys `"name"` and `"age"` using square brackets `[]` and the `get()` method, respectively.
+- Assigning these values to variables allows us to work with them in the program.
 Dictionaries are incredibly useful for tasks like storing settings, representing complex data structures, and much more. They provide a convenient way to organize and manipulate data in Python.
 
 ## SET
@@ -408,6 +425,35 @@ You can add elements to a set using the `add()` method.
 ```python
 my_set.add(6)
 ```
+In Python, you can add more values to a set using the `.add()` method to add a single element or the `.update()` method to add multiple elements. Here's how you can use them:
+
+**Using `.add()` to Add a Single Element:**
+```python
+# Define a set
+my_set = {1, 2, 3}
+
+# Add a single element to the set
+my_set.add(4)
+
+print(my_set)  # Output: {1, 2, 3, 4}
+```
+
+In this example, the `.add()` method adds the element `4` to the set `my_set`.
+
+**Using `.update()` to Add Multiple Elements:**
+```python
+# Define a set
+my_set = {1, 2, 3}
+
+# Add multiple elements to the set
+my_set.update([4, 5, 6])
+
+print(my_set)  # Output: {1, 2, 3, 4, 5, 6}
+```
+
+In this example, the `.update()` method adds the elements `[4, 5, 6]` to the set `my_set`.
+
+Both `.add()` and `.update()` methods modify the original set in place. If you try to add elements that are already present in the set, they will be ignored, as sets do not allow duplicate elements.
 
 **Removing Elements**:
 You can remove elements from a set using the `remove()` or `discard()` method.
