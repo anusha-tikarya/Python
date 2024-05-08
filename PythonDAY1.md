@@ -141,3 +141,31 @@ print(b)#[1, 3, 4]
 ```
 
 
+### TUPLES 
+
+```python
+tup=(1,2,3,4,5,6)
+print(tup[1])  # Output: 2
+print(type(tup))  # Output: <class 'tuple'>
+print(tup.count(2))  # Output: 1
+tup=(1,2,3,4,5,6)
+print(tup.index(3))  # Output: 2
+```
+### Shallow copy 
+The `copy()` method is not available for tuples in Python because tuples are immutable, meaning their elements cannot be modified after creation. However, you can create a shallow copy of a tuple using slicing or the `tuple()` constructor. Here's how you can do it:
+
+```python
+# Original tuple
+original_tuple = (1, 2, 3)
+
+# Shallow copy using slicing
+shallow_copy = original_tuple[:]
+
+# Shallow copy using tuple() constructor
+shallow_copy = tuple(original_tuple)
+
+print(shallow_copy)
+```
+
+Both methods create a new tuple with the same elements as the original tuple, effectively producing a shallow copy. Remember that if the tuple contains mutable objects (like lists), changes made to those objects will be reflected in both the original and copied tuples because they share references to the same objects.
+
