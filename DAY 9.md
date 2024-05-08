@@ -303,10 +303,65 @@ def greet(name):
 
 Both ways are valid and can be used based on the requirements of the function. The choice depends on whether the function needs to return a value or not.
 ## =======================================================
+**Python provides built-in functions such as `sum()`, `max()`, and `min()` that allow you to perform common operations on iterables like lists, tuples, and sets. Here's how you can use them:**
+
+### `sum()`:
+The `sum()` function calculates the sum of all the elements in an iterable (e.g., list, tuple, set).
+
+```python
+numbers = [1, 2, 3, 4, 5]
+total = sum(numbers)
+print(total)  # Output: 15
+```
+
+### `max()`:
+The `max()` function returns the maximum element from an iterable.
+
+```python
+numbers = [1, 2, 3, 4, 5]
+maximum = max(numbers)
+print(maximum)  # Output: 5
+```
+
+### `min()`:
+The `min()` function returns the minimum element from an iterable.
+
+```python
+numbers = [1, 2, 3, 4, 5]
+minimum = min(numbers)
+print(minimum)  # Output: 1
+```
+
+### `sum()`, `max()`, and `min()` with Other Iterables:
+These functions also work with other iterables like tuples and sets:
+
+```python
+# Using sum(), max(), and min() with tuples
+my_tuple = (10, 20, 30, 40, 50)
+total = sum(my_tuple)
+maximum = max(my_tuple)
+minimum = min(my_tuple)
+
+print(total)    # Output: 150
+print(maximum)  # Output: 50
+print(minimum)  # Output: 10
+
+# Using sum(), max(), and min() with sets
+my_set = {3, 1, 4, 1, 5, 9, 2, 6, 5}
+total = sum(my_set)
+maximum = max(my_set)
+minimum = min(my_set)
+
+print(total)    # Output: 31
+print(maximum)  # Output: 9
+print(minimum)  # Output: 1
+```
+
+These built-in functions provide convenient ways to perform common operations on iterable objects in Python.
 def own_max(*nums):
     print(nums, type(nums))
  
- 
+ ### =========================
 own_max(5, 6, 10)
 own_max(5, 6, 10, 7, 80, 60)
 
@@ -329,4 +384,5 @@ def own_max(*nums):
      return max
 ```
 ![image](https://github.com/anusha-tikarya/Python.md/assets/84814767/2ac3f9a9-e297-45ba-8f91-4c00435b80c5)
+
 
