@@ -64,6 +64,7 @@ print(str[:-3])
 ```
 ### endswith , capitalize , replace , find , count
 ```python
+str = "apple is red"
 print(str.endswith("app"))  # endswith function tells if a function ends with a particular string or not
 print(str.capitalize())  # capitalize makes the first letter of the string capital.
 print(str.replace("apple", "cherry"))
@@ -71,4 +72,72 @@ print(str.find("c"))  # -1 as it doesn't exist
 print(str.find("apple"))  # name starts at index _
 print(str.count("e"))  # count no. of occurrence of a particular string
 ```
+## Conditional Statement:
+```python
+if (condition):
+elif(condition):
+else:
+```
+## Nesting 
+```python
+if (condition): 
+    if (condition):
+    else:
+else:
+```
+## List
+```python
+marks = [40,20,30,40,"KUMU"]
+print(marks[1])#20
+marks[1]=45
+print(marks[1])#45
+```
+## List slicing 
+```python
+# strating_index : ending_index
+
+a=[ 1,2,"abhi","sabhi"]
+print(a[2:3])
+```
+## LIST METHODS:
+
+### list.append
+```python
+b=[1,2,3,4,5]
+b.append(4)
+print(b)
+```
+### list.sort
+```python
+b=[1,2,3,4,5]
+print(b.sort())#None , as it just change 
+print(b) #[1, 2, 3, 4, 5] , as sorting is done before
+print(b.sort(reverse=True))# now list will print in desc. order
+print(b)#[5, 4, 3, 2, 1]
+```
+### list.reverse
+```python
+b=[1,2,3,4,5]
+b.reverse # this will reverse the final or true list
+print(b)
+```
+### list.insert(index , element)
+```python
+b=[1,2,3,4,5]
+b.insert(0,4)
+print(b) #[4,5, 4, 3, 2, 1]
+```
+### list.remove(element)
+```python
+b=[1,2,3,4,5]
+print(b.remove(1))#None
+print(b)#[2, 3, 4, 5]
+```
+### list.pop(index)
+```python
+b=[1,2,3,4]
+b.pop(1)
+print(b)#[1, 3, 4]
+```
+
 
