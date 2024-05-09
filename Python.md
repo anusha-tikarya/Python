@@ -40,6 +40,8 @@ print(sum(1, 2))
 ```python
 # String Operations
 str = "I am happy \n I am healthy \t I am wealthy"    # \n for new line and \t for tab
+print(""" allow multiple line
+support """)## just paste same as you have as it supports multiple lines
 print(str)
 ```
 ### Concatenation
