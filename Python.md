@@ -6,6 +6,14 @@ print("I am 21")
 print(21)
 print(21 + 22)
 ```
+### input
+name1,name2 = input(f'What is first guy\'s name? '),input(f'What is second guy\'s name? ') # f' string use to print #/ is use to use(')
+height1,height2 = int(input(f'What is {name1}\'s height?  ')),int(input(f'what is {name2}\'s height? ')) # {} --> these are use to variable directly without using"+""
+if height1 > height2:
+  print(f'{name1} is taller than {name2}')
+else:
+  print(f'{name2} is taller than {name1}')
+  
 ### Variables and Data Types
 ```python
 # Variables and Data Types
